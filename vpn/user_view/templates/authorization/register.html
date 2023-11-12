@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="login-container">
+
+        <div class="design-el-square-1"></div>
+        <div class="design-el-square-2"></div>
+        <div class="design-el-square-3"></div>
+
+        <div class="login-block">
+
+            <h1 class="logo-text">Registration</h1>
+
+            <form method="post">
+
+                {% csrf_token %}
+
+                {{ form.non_field_errors }}
+
+                <div class="action-block">
+                    <label>{{form.username.label}} <span class="text-red">*</span></label><br/>
+                    <input type="text" name="{{ form.username.name }}" autocomplete="off">
+                    <span class="error_message">{{ form.username.errors }}</span>
+                </div>
+
+                <div class="action-block">
+                    <label>{{form.password1.label}} <span class="text-red">*</span></label><br/>
+                    <input type="text" name="{{ form.password1.name }}" autocomplete="off">
+                    <span class="error_message">{{ form.password1.errors }}</span>
+                </div>
+
+                 <div class="action-block">
+                    <label>{{form.password2.label}} <span class="text-red">*</span></label><br/>
+                    <input type="text" name="{{ form.password2.name }}" autocomplete="off">
+                    <span class="error_message">{{ form.password2.errors }}</span>
+                </div>
+
+                 <div class="action-block">
+                    <label>{{form.email.label}} <span class="text-red">*</span></label><br/>
+                    <input type="text" name="{{ form.email.name }}" autocomplete="off">
+                    <span class="error_message">{{ form.email.errors }}</span>
+                </div>
+
+                <div class="action-block">
+                    <label>{{form.phone.label}} <span class="text-red">*</span></label><br/>
+                    <input type="text" name="{{ form.phone.name }}" placeholder="+380XXXXXXXXX">
+                    <span class="error_message">{{ form.phone.errors }}</span>
+                </div>
+
+                <button type="submit" class="action-block btn-submit">Sign Up</button>
+
+                <div class="btn-back-to-login-page">Back to <a href="/">Login page</a></div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+{% endblock content %}

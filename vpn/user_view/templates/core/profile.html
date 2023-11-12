@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <div class="add_site_form">
+
+        <h1 class="logo-text">Edit Profile</h1>
+
+        <form method="post" class="profile-form">
+
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+
+            <div class="action-block">
+                <lable>First name</lable>
+                {{ form.first_name }}
+                <span class="error_message">{{ form.first_name.errors }}</span>
+            </div>
+
+            <div class="action-block">
+                <lable>Last name</lable>
+                {{ form.last_name }}
+                <span class="error_message">{{ form.last_name.errors }}</span>
+            </div>
+
+             <div class="action-block">
+                 <lable>Username</lable>
+                 {{ form.username }}
+                 <span class="error_message">{{ form.username.errors }}</span>
+            </div>
+
+             <div class="action-block">
+                 <lable>Phone</lable>
+                 {{ form.phone }}
+                 <span class="error_message">{{ form.phone.errors }}</span>
+            </div>
+
+            <button type="submit" class="action-block btn-submit">Save Changes</button>
+
+        </form>
+
+    </div>
+
+{% endblock %}

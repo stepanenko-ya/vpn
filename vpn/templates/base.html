@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+        <meta name="description" content="VPN Service">
+        <link rel="icon" href="{% static 'img/favicon.ico' %}">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>

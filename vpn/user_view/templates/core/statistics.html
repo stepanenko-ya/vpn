@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <div class="content-block">
+
+        {% if not table_data %}
+
+            <div class="label-no-items">No items</div>
+
+        {% else %}
+
+            <h1 class="title">{{ title }}</h1>
+
+            <table class="main-table">
+                <thead>
+                    {%  for column_name in table_column_names %}
+                        <th>{{ column_name }}</th>
+                    {% endfor %}
+                </thead>
+                {%  for data in table_data  %}
+                    <tr class="{% cycle 'even' 'odd' %}">
+                        <td>{{ data.site_name }}</td>
+                        <td>{{ data.url }}</td>
+                        <td>{{ data.page_transitions }}</td>
+                        <td>{{data.data_sent}}</td>
+                        <td>{{data.data_received}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        {% endif %}
+
+    </div>
+
+{% endblock %}

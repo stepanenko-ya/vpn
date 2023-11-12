@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="login-container">
+
+        <div class="design-el-square-1"></div>
+        <div class="design-el-square-2"></div>
+        <div class="design-el-square-3"></div>
+
+        <div class="login-block">
+
+            <h1 class="logo-text">Login</h1>
+
+            <form method="post">
+
+                {% csrf_token %}
+
+                <div class="form-error">{{ form.non_field_errors }}</div>
+
+                <div class="action-block">
+                    <label>Username</label><br/>
+                    <input type="text" name="{{ form.username.name }}" autocomplete="off">
+                    <span class="error_message">{{ form.username.errors }}</span>
+                </div>
+
+                <div class="action-block">
+                    <label>Password</label><br />
+                    <input type="password" name="{{ form.password.name }}" autocomplete="off">
+                    <span class="error_message">{{ form.password.errors }}</span>
+                </div>
+
+                <div class="form-check action-block d-flex" onclick="toggleCheckbox(this)">
+                    <div class="row-checkbox">
+                        <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.852 2.14652C11.6551 1.95116 11.3354 1.95116 11.1385 2.14652L3.99979 9.23777L0.861113 6.14356C0.664259 5.9482 0.344495 5.9482 0.147641 6.14356C-0.0492136 6.33892 -0.0492136 6.65518 0.147641 6.85004L3.64455 10.297C3.83941 10.4898 4.16367 10.4898 4.35853 10.297L11.852 2.85299C12.0493 2.65814 12.0493 2.34137 11.852 2.14652C12.0493 2.34137 11.6551 1.95116 11.852 2.14652Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <input type="checkbox" name="{{ form.remember_me.name }}" autocomplete="off">
+                    <label class="form-check-label" for="{{ form.remember_me.id_for_label }}">Keep me signed in</label>
+                </div>
+
+                <div class="d-flex">
+                    <button type="submit" class="btn-submit">Sign In</button>
+                    <a href="{% url 'register' %}" class="btn-submit">Sign Up</a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="/static/js/scripts.js"></script>
+
+{% endblock content %}

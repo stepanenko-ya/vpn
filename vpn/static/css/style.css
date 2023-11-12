@@ -1,0 +1,330 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6fa;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.design-el-square-1 {
+    top: -100px;
+    right: -50px;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    border-radius: 64px;
+    transform: rotate(45deg);
+    background-color: #325CF4;
+}
+
+.design-el-square-2 {
+    left: -125px;
+    bottom: -20px;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 64px;
+    transform: rotate(75deg);
+    background-color: #325CF4;
+}
+
+.design-el-square-3 {
+    left: 80px;
+    bottom: -160px;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 64px;
+    transform: rotate(75deg);
+    background-color: #FF951A;
+}
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.login-block {
+    z-index: 1;
+    margin: auto;
+    padding: 50px 250px;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #E6E7EB;
+}
+
+.logo-text {
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0 40px;
+}
+
+form {
+    width: 360px;
+}
+
+.form-error ul {
+    color: red;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    list-style-type: none;
+    background-color: #fbf1f1;
+}
+
+.error_message ul {
+    color: red;
+    padding: 0;
+    font-size: 12px;
+    margin: 3px 17px;
+    list-style-type: none;
+}
+
+.action-block {
+    margin-top: 20px;
+}
+
+.action-block label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.action-block input {
+    width: 90%;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    padding: 12px 17px;
+    border-radius: 8px;
+    background-color: #F5F6FA;
+}
+
+.form-check input {
+    opacity: 0;
+    position: absolute;
+}
+
+.form-check label {
+    font-weight: 100;
+    margin: 1px 10px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.text-red {
+    color: #d91717;
+}
+
+.form-check-label {
+    margin-top: 2px!important;
+}
+
+.row-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid #325CF4;
+    background-color: rgb(255, 255, 255);
+}
+
+.row-checkbox.checked {
+    background-color: rgb(50, 92, 244);
+}
+
+.row-checkbox svg {
+    margin-top: 2px;
+}
+
+.btn-submit {
+    width: 100%;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin: 25px 2px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: #325CF4;
+}
+
+.btn-back-to-login-page {
+    margin: 10px 5px;
+    text-align: center;
+}
+
+.btn-back-to-login-page a {
+    color: #325cf4;
+    text-decoration: none;
+}
+
+.info-container {
+    width: 900px;
+    padding: 30px;
+    margin: 200px auto 0;
+    border-radius: 40px;
+    background: #c2cdd72e;
+}
+
+.info-container h1 {
+    color: #074571;
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+}
+
+.info-container p {
+    color: #5b7b92;
+    font-size: 30px;
+    line-height: 1.5;
+    font-style: italic;
+    text-align: justify;
+}
+
+.content-block {
+    padding: 100px;
+    margin-top: 15px;
+    overflow-y: scroll;
+    border-radius: 20px;
+}
+
+.add_site_form {
+    width: 500px;
+    margin: 120px auto;
+    border-radius: 40px;
+    background: #ebeff5;
+    padding: 30px 0 60px;
+}
+
+.add_site {
+    border: none;
+    width: 350px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 15px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    background: #2871e7;
+}
+
+.label-no-items {
+    color: #dfdfdf;
+    margin: 80px 0;
+    font-size: 72px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.redirect-site-btn {
+    color: white;
+    border: none;
+    width: 127px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    background: #ff951ac4;
+}
+
+.main-table {
+    min-width: 100%;
+    width: max-content;
+}
+
+thead th {
+    font-size: 15px;
+    text-align: left;
+    padding: 10px 15px 10px 15px;
+}
+
+table td {
+    padding: 10px 0 10px 15px;
+    font-size: 14px;
+    font-weight: 100;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+table tr:hover td {
+    background-color: #ecedef !important;
+}
+
+.even td {
+    background-color: #fff;
+}
+
+.profile-form {
+    margin: 0 auto;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background: #c3c6c99e;
+    justify-content: space-between;
+}
+
+.logo-btn {
+    margin-right: 10px;
+}
+
+.logo-btn img {
+    width: 35px;
+    height: 35px;
+    margin: 7px 15px;
+}
+
+.logout-btn {
+    margin: 15px;
+}
+
+.logout-btn:hover a {
+    background-color: #98aed2;
+}
+
+.logout-btn a {
+    color: #0c56cdbd;
+    width: 37px;
+    height: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #b4c4df;
+}
+
+.menu-btn {
+    cursor: pointer;
+    margin: 8px 10px;
+    padding: 7px 15px;
+    border-radius: 8px;
+}
+
+.menu-btn:hover {
+    background-color: #b4c4df;
+}
+
+.menu-btn a {
+    font-size: 18px;
+    color: #0c56cdbd;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.title {
+    margin: 0 0 50px 15px;
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <div class="add_site_form">
+
+        <h1 class="logo-text">Add new site</h1>
+
+        <form method="post" class="profile-form">
+
+            {% csrf_token %}
+
+            <div class="action-block">
+                <label>Site name</label><br/>
+                <input type="text" name="{{ form.name.name }}" autocomplete="off">
+                <span class="error_message">{{ form.name.errors }}</span>
+            </div>
+
+            <div class="action-block">
+                <label>Site URL</label><br/>
+                <input type="text" name="{{ form.url.name }}" autocomplete="off">
+                <span class="error_message">{{ form.url.errors }}</span>
+            </div>
+
+            <button type="submit" class="action-block btn-submit">Save</button>
+
+        </form>
+
+    </div>
+
+{% endblock %}

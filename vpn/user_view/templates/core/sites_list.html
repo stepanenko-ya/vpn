@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <div class="content-block">
+
+        <a href="{% url 'site_creation' %}">
+            <button class="add_site">Add new site</button>
+        </a>
+
+        {% if not table_data %}
+
+            <div class="label-no-items">No items</div>
+
+        {% else %}
+
+            <table class="main-table">
+                <thead>
+                    {%  for column_name in table_column_names %}
+                        <th>{{ column_name }}</th>
+                    {% endfor %}
+                </thead>
+                {%  for data in table_data  %}
+                    <tr class="{% cycle 'even' 'odd' %}">
+                        <td>{{ data.name }}</td>
+                        <td>{{ data.url }}</td>
+                        <td>
+                            <a href="{{data.new_url}}" target="_blank">
+                                <button class="redirect-site-btn">Go to the site</button>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        {% endif %}
+
+    </div>
+
+{% endblock content %}

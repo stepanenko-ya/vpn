@@ -1,0 +1,13 @@
+{% load static %}
+
+<div class="navbar">
+    <div class="d-flex">
+        <div class="logo-btn"><a href="{% url 'home' %}"><img src="{% static 'img/favicon.ico' %}"></a></div>
+        <div class="menu-btn"><a href="{% url 'statistics' %}">Statistics</a></div>
+        <div class="menu-btn"><a href="{% url 'sites_list' %}">Sites list</a></div>
+        <div class="menu-btn"><a href="{% url 'profile' %}">Profile</a></div>
+    </div>
+    <div class="logout-btn">
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+</div>
